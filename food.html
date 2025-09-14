@@ -15,9 +15,8 @@
       type="image/x-icon"
       href="assets/img/favicon.png"
     />
-    <!-- Place favicon.ico in the root directory -->
 
-    <!-- CSS here -->
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/animate.min.css" />
     <link rel="stylesheet" href="assets/css/magnific-popup.css" />
@@ -31,6 +30,63 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+
+    <style>
+      /* FIXES FOR GRID OVERLAP */
+      .row.grid {
+        margin-top: 30px;
+      }
+      .grid-item {
+        display: flex;
+      }
+      .food-card {
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .food-img-slider {
+        position: relative;
+        width: 100%;
+        padding-top: 0%; /* 3:2 aspect ratio, adjust if needed */
+        overflow: hidden;
+      }
+
+      .food-img-slider img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* fills without distortion */
+      }
+
+      .food-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+      .filter-btn {
+        border: none;
+        background: #eee;
+        padding: 8px 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: #007bff;
+        color: #fff;
+      }
+    </style>
   </head>
 
   <body>
@@ -56,10 +112,10 @@
               <div class="tgmenu__wrap d-flex align-items-center">
                 <div class="logo">
                   <a class="logo-1" href="/index.html"
-                    ><img src="assets/img/logo/logo White.png" alt="Logo"
+                    ><img src="./assets/img/logo/logo White.png" alt="Logo"
                   /></a>
                   <a class="logo-2 d-none" href="/index.html"
-                    ><img src="assets/img/logo/logo Black.png" alt="Logo"
+                    ><img src="./assets/img/logo/logo Black.png" alt="Logo"
                   /></a>
                 </div>
                 <nav class="tgmenu__nav tgmenu-1-space ml-180">
@@ -71,11 +127,11 @@
                         <a href="/index.html">Home</a>
                         <ul class="sub-menu">
                           <li><a href="/index.html">Home One</a></li>
-                          <li><a href="index-2.html">Home Two</a></li>
-                          <li><a href="index-3.html">Home Three</a></li>
-                          <li><a href="index-4.html">Home Four</a></li>
-                          <li><a href="index-5.html">Home Five</a></li>
-                          <li><a href="index-6.html">Home Six</a></li>
+                          <li><a href="/index-2.html">Home Two</a></li>
+                          <li><a href="/index-3.html">Home Three</a></li>
+                          <li><a href="/index-4.html">Home Four</a></li>
+                          <li><a href="/index-5.html">Home Five</a></li>
+                          <li><a href="/index-6.html">Home Six</a></li>
                           <li><a href="index-7.html">Home Saven</a></li>
                         </ul>
                       </li>
@@ -197,7 +253,9 @@
                       <div class="cart-img-info d-flex align-items-center">
                         <div class="cart-thumb">
                           <a href="shop.html">
-                            <img src="assets/img/shop/sm-product-1.jpg" alt=""
+                            <img
+                              src="./assets/img/shop/sm-product-1.jpg"
+                              alt=""
                           /></a>
                         </div>
                         <div class="cart-content">
@@ -217,7 +275,9 @@
                       <div class="cart-img-info d-flex align-items-center">
                         <div class="cart-thumb">
                           <a href="shop.html">
-                            <img src="assets/img/shop/sm-product-2.jpg" alt=""
+                            <img
+                              src="./assets/img/shop/sm-product-2.jpg"
+                              alt=""
                           /></a>
                         </div>
                         <div class="cart-content">
@@ -295,7 +355,7 @@
           <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
           <div class="nav-logo">
             <a href="/index.html"
-              ><img src="assets/img/logo/logo Black.png" alt="logo"
+              ><img src="./assets/img/logo/logo Black.png" alt="logo"
             /></a>
           </div>
           <div class="tgmobile__search">
@@ -406,20 +466,25 @@
             </button>
           </div>
         </div>
-        <div class="row grid">
+
+        <!-- GRID FIX: added g-4 for spacing -->
+        <div class="row g-4 grid">
           <!-- Example Place 1 -->
           <div class="col-lg-4 col-md-6 grid-item non-veg">
-            <div class="food-card mb-4">
+            <div class="food-card">
               <div class="food-img-slider swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="assets/img/foods/33.jpg" alt="Signature Dish 1" />
+                    <img
+                      src="./assets/img/foods/33.jpg"
+                      alt="Signature Dish 1"
+                    />
                   </div>
                   <div class="swiper-slide">
-                    <img src="assets/img/foods/34.jpg" alt="Ambience" />
+                    <img src="./assets/img/foods/34.jpg" alt="Ambience" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="assets/img/foods/32.jpg" alt="Dish Angle" />
+                    <img src="./assets/img/foods/32.jpg" alt="Dish Angle" />
                   </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -435,15 +500,12 @@
                   Kediyoor Gazebo is a modernized multi-cuisine restaurant in
                   Udupi.
                 </p>
-                <div class="signature-dishes"></div>
-                <!-- Click Now button -->
                 <a
                   href="https://g.co/kgs/Lz66tm3"
                   target="_blank"
                   class="btn custom-map-btn mt-3"
+                  >Click for Location</a
                 >
-                  Click for Location
-                </a>
               </div>
             </div>
           </div>
@@ -454,14 +516,14 @@
               <div class="food-img-slider swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img src="assets/img/foods/30.jpg" alt="Signature Dish" />
+                    <img src="/assets/img/foods/30.jpg" alt="Signature Dish" />
                   </div>
                   <div class="swiper-slide">
-                    <img src="assets/img/foods/31.jpg" alt="Interior" />
+                    <img src="/assets/img/foods/31.jpg" alt="Interior" />
                   </div>
                   <div class="swiper-slide">
                     <img
-                      src="assets/img/foods/29.jpg"
+                      src="/assets/img/foods/29.jpg"
                       alt="Dish Presentation"
                     />
                   </div>
@@ -1776,253 +1838,46 @@
     </section>
     <!-- FOOD SECTION END -->
 
-    <!-- Required Swiper JS and Isotope for filtering -->
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script>
-      const grid = document.querySelector(".grid");
-      const iso = new Isotope(grid, {
-        itemSelector: ".grid-item",
-        layoutMode: "fitRows",
-      });
+    <!-- JS -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-      document.querySelectorAll(".filter-btn").forEach((btn) => {
-        btn.addEventListener("click", function () {
-          document
-            .querySelectorAll(".filter-btn")
-            .forEach((b) => b.classList.remove("active"));
-          this.classList.add("active");
-          const filterValue = this.getAttribute("data-filter");
-          iso.arrange({ filter: filterValue });
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Swiper init
+        document.querySelectorAll(".food-img-slider").forEach((el) => {
+          new Swiper(el, {
+            loop: true,
+            pagination: {
+              el: el.querySelector(".swiper-pagination"),
+              clickable: true,
+            },
+          });
+        });
+
+        // Isotope init
+        var iso = new Isotope(".grid", {
+          itemSelector: ".grid-item",
+          layoutMode: "fitRows",
+        });
+
+        // Filter buttons
+        document.querySelectorAll(".filter-btn").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            let filterValue = this.getAttribute("data-filter");
+            iso.arrange({ filter: filterValue });
+            document
+              .querySelectorAll(".filter-btn")
+              .forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+          });
         });
       });
-
-      new Swiper(".food-img-slider", {
-        loop: true,
-        pagination: { el: ".swiper-pagination", clickable: true },
-        autoplay: { delay: 3000 },
-        grabCursor: true,
-      });
     </script>
-
-    <style>
-      .food-card {
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        background: #fff;
-        transition: transform 0.3s;
-      }
-      .food-card:hover {
-        transform: translateY(-5px);
-      }
-      .food-content h4 {
-        font-weight: 600;
-      }
-      .signature-dishes .badge {
-        margin-right: 5px;
-        margin-bottom: 5px;
-        font-size: 13px;
-        padding: 5px 10px;
-        border-radius: 20px;
-      }
-      .filter-buttons .filter-btn {
-        margin: 5px;
-        padding: 8px 16px;
-        border: none;
-        background: #ddd;
-        border-radius: 20px;
-        cursor: pointer;
-        transition: background 0.3s;
-      }
-      .filter-buttons .filter-btn.active,
-      .filter-buttons .filter-btn:hover {
-        background: #333;
-        color: #fff;
-      }
-    </style>
-
-    <!-- footer-area-start -->
-    <footer>
-      <div
-        class="tg-footer-area pt-130 include-bg"
-        data-background="assets/img/footer/footer-2.jpg"
-      >
-        <div class="container">
-          <div class="tg-footer-top pb-40">
-            <div class="row">
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="tg-footer-widget mb-40">
-                  <div class="tg-footer-logo mb-20">
-                    <a href="/index.html"
-                      ><img src="assets/img/logo/logo White.png" alt=""
-                    /></a>
-                  </div>
-                  <p class="mb-20">
-                    From arrival to farewell, every detail is designed to
-                    delight, comfort, and inspire lasting memories.
-                  </p>
-                  <div class="tg-footer-form mb-30">
-                    <form action="#">
-                      <input type="email" placeholder="Enter your mail" />
-                      <button class="tg-footer-form-btn" type="submit">
-                        <svg
-                          width="22"
-                          height="17"
-                          viewBox="0 0 22 17"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M1.52514 8.47486H20.4749M20.4749 8.47486L13.5 1.5M20.4749 8.47486L13.5 15.4497"
-                            stroke="white"
-                            stroke-width="1.77778"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </button>
-                    </form>
-                  </div>
-                  <div class="tg-footer-social">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="tg-footer-widget tg-footer-link ml-80 mb-40">
-                  <h3 class="tg-footer-widget-title mb-25">Quick Links</h3>
-                  <ul>
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/about.html">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Tour Guide</a></li>
-                    <li><a href="/contact.html"> Contact Us</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="tg-footer-widget tg-footer-info mb-40">
-                  <h3 class="tg-footer-widget-title mb-25">Information</h3>
-                  <ul>
-                    <li>
-                      <a
-                        class="d-flex"
-                        href="https://www.google.com/maps/@41.6758525,-86.2531698,18.17z"
-                      >
-                        <span class="mr-15">
-                          <svg
-                            width="20"
-                            height="24"
-                            viewBox="0 0 20 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M19.0013 10.0608C19.0013 16.8486 10.3346 22.6668 10.3346 22.6668C10.3346 22.6668 1.66797 16.8486 1.66797 10.0608C1.66797 7.74615 2.58106 5.52634 4.20638 3.88965C5.83169 2.25297 8.03609 1.3335 10.3346 1.3335C12.6332 1.3335 14.8376 2.25297 16.4629 3.88965C18.0882 5.52634 19.0013 7.74615 19.0013 10.0608Z"
-                              stroke="white"
-                              stroke-width="1.73333"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M10.3346 12.9699C11.9301 12.9699 13.2235 11.6674 13.2235 10.0608C13.2235 8.45412 11.9301 7.15168 10.3346 7.15168C8.73915 7.15168 7.44575 8.45412 7.44575 10.0608C7.44575 11.6674 8.73915 12.9699 10.3346 12.9699Z"
-                              stroke="white"
-                              stroke-width="1.73333"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                        </span>
-                        Branches: Manipal, Udupi, Mangalore, Bangalore
-                      </a>
-                    </li>
-                    <li>
-                      <a class="d-flex" href="tel:+1238889999">
-                        <span class="mr-15">
-                          <i class="fa-sharp text-white fa-solid fa-phone"></i>
-                        </span>
-                        +91 7204530222, +91 9148169707
-                      </a>
-                    </li>
-                    <li class="d-flex">
-                      <span class="mr-15">
-                        <svg
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M11.9987 5.60006V12.0001L16.2654 14.1334M22.6654 12.0002C22.6654 17.8912 17.8897 22.6668 11.9987 22.6668C6.10766 22.6668 1.33203 17.8912 1.33203 12.0002C1.33203 6.10912 6.10766 1.3335 11.9987 1.3335C17.8897 1.3335 22.6654 6.10912 22.6654 12.0002Z"
-                            stroke="white"
-                            stroke-width="1.6"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </span>
-                      <p class="mb-0">
-                        Mon – Sat: 24 Hours<br />
-                        Sunday:
-                        <span class="text-white d-inline-block">CLOSED</span>
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                <div class="tg-footer-widget tg-footer-link mb-40">
-                  <h3 class="tg-footer-widget-title mb-25">Utility Pages</h3>
-                  <ul>
-                    <li><a href="#">Style Guide</a></li>
-                    <li><a href="#">Password Protected</a></li>
-                    <li><a href="#">404 Error</a></li>
-                    <li><a href="#">Changelog</a></li>
-                    <li><a href="#">License</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="tg-footer-copyright text-center">
-          <span> Copyright <a href="#">©Tourex</a> | All Right Reserved </span>
-        </div>
-      </div>
-    </footer>
-    <!-- footer-area-end -->
-
-    <!-- JS here -->
-    <script src="assets/js/vendor/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/jquery.odometer.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/flatpickr.js"></script>
-    <script src="assets/js/nice-select.js"></script>
-    <script src="assets/js/ajax-form.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-      var swiper = new Swiper(".food-img-slider", {
-        loop: true,
-        autoplay: {
-          delay: 3000, // 3 seconds between slides
-          disableOnInteraction: false, // keeps autoplay even after user clicks
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
+      window.addEventListener("load", function () {
+        document.getElementById("loading").style.display = "none";
       });
     </script>
   </body>
